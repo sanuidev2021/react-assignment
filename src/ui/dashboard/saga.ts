@@ -4,7 +4,7 @@ import {PayloadAction} from 'redux-starter-kit'
 import {IMetric, SelectPayload} from './types';
 import {getMetrics, getLatestValue} from './reducer';
 import { actions } from './reducer';
-import { client } from '../../app';
+import { client } from '../../App';
 
 const DURATION_IN_MINUTES = 30;
 
