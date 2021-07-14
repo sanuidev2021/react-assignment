@@ -1,6 +1,6 @@
 import { spawn } from 'redux-saga/effects';
-import weatherSaga from '../features/weather/saga';
-import metricSaga from '../features/dashboard/saga';
+import weatherSaga from '../ui/weather/saga';
+import metricSaga from '../ui/dashboard/saga';
 
 export default function* root() {
   yield spawn(weatherSaga);

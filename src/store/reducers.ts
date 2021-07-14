@@ -1,5 +1,5 @@
-import { reducer as weatherReducer } from '../features/weather/reducer';
-import {reducer as metricReducer} from '../features/dashboard/reducer';
+import { reducer as weatherReducer } from '../ui/weather/reducer';
+import {reducer as metricReducer} from '../ui/dashboard/reducer';
 
 export default {
   weather: weatherReducer,

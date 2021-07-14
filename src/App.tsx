@@ -7,7 +7,10 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { Provider as QueryProvider, createClient,defaultExchanges, subscriptionExchange } from 'urql';
 import { SubscriptionClient } from 'subscriptions-transport-ws';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { createTheme } from '@material-ui/core/styles'
+import Header from './components/header';
+import Wrapper from './components/wrapper';
+import Dashboard from './ui/dashboard/dashboard';
 const URL = 'https://react.eogresources.com/graphql';
 const WS_URL = 'ws://react.eogresources.com/graphql';
 const Root = () => (
@@ -15,6 +18,11 @@ const Root = () => (
     <CssBaseline />
     <Provider store={store}>
     <QueryProvider value={client}>
+    <Wrapper>
+        <Header />
+        <Dashboard/>
+        <ToastContainer />
+      </Wrapper>
     </QueryProvider>
     </Provider>
   </MuiThemeProvider>
@@ -35,7 +43,7 @@ export const client = createClient({
 });
 
 const store = createStore();
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: 'rgb(39,49,66)',
